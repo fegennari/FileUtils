@@ -12,7 +12,7 @@ void write_int_val(int val, ostream &out) {
 	if      (val < 0   ) {out.put('-'); val = -val;} // negative
 	if      (val < 10  ) {out.put('0' + char(val));} // 1 digit
 	else if (val < 100 ) {out.put('0' + char(val/10 )); out.put('0' + char(val%10));} // 2 digits
-	else if (val < 1000) {out.put('0' + char(val/100)); out.put('0' + char((val/10)%10)); out.put('0' + char(val%100));} // 3 digits
+	else if (val < 1000) {out.put('0' + char(val/100)); out.put('0' + char((val/10)%10)); out.put('0' + char(val%10));} // 3 digits
 	else {out << val;} // 4+ digits
 }
 void write_val(int            const val, ostream &out) {write_int_val(val, out);}
